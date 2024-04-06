@@ -1,0 +1,49 @@
+
+<div class="container-fluid page-header py-5" >
+    <h1 class="text-center  display-6" style="color:bisque;">Reviews</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a routerLink="/home" class="text-secondary">Home</a></li>
+        <li class="breadcrumb-item active " style="color: bisque;">Reviews</li>
+    </ol>
+</div>
+<div class="container-fluid testimonial py-5">
+    <div class="container py-5">
+        <div class="testimonial-header text-center">
+            <h4 class="text-secondary">Our Reviews</h4>
+            <h1 class="display-5 mb-5" style="color: #b57945;">Our Client Saying!</h1>
+        </div>
+        
+        <div class="d-flex justify-content-center flex-wrap">
+           @for(rev of Reviews;track rev.id){
+            <div class="testimonial-item img-border-radius  rounded p-4 m-3" style="background-color: #7c3e04;width: 500px;color: white;">
+                <div class="position-relative">
+                    <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
+                    <div class="mb-4 pb-4 border-bottom border-secondary">
+                        <p class="mb-0">{{rev.review}}
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap">
+                        <div class=" rounded">
+                            <img src={{rev.imageUrl}} class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                        </div>
+                        <div class="ms-4 d-block">
+                            <h4 class="text-white">{{rev.author}}</h4>
+                            <p class="m-0 pb-3">{{rev.date}}</p>
+                            <div class="d-flex pe-5">
+                                <i class="fas fa-star text-secondary"></i>
+                                <i class="fas fa-star text-secondary"></i>
+                                <i class="fas fa-star text-secondary"></i>
+                                <i class="fas fa-star text-secondary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        </div>
+    </div>
+</div>
+
+
+

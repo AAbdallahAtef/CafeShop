@@ -1,0 +1,27 @@
+<div class="col-lg-9 "  >
+    <div class="row g-4 justify-content-center m-auto">
+        <div class="col-md-6 col-lg-6 col-xl-4  mb-4"  >
+            <div class="rounded position-relative fruite-item " style="    width: 20rem;background-color:#b57945;">
+                <div class="fruite-img">
+                    <img [src]="oneProduct.image" class="img-fluid w-100 rounded-top " style="height: 15rem;"
+                        alt="">
+                </div>
+                <div class="text-white px-3 py-1 rounded position-absolute  "
+                    style="top: 10px; left: 10px;"></div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom ">
+                    <h4 style="color: #58300d;">{{oneProduct.title}}</h4>
+                    <div >
+                        <p class=" fs-5 fw-bold mb-0" style="color:#ffb524;">{{oneProduct.price}} $</p>
+
+                        <button routerLink="/update/{{oneProduct.id}}" class="btn border  rounded-pill px-3 "
+                            style="background-color: #7c3e04; color:white;">Update or Delete</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  

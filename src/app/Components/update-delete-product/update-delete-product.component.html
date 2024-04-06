@@ -1,0 +1,61 @@
+<div style="margin-top: 14rem;" class="container-fluid mb-5  w-50">
+    <h2 class="text-center mt-5" style="color: #58300d;">Update Product</h2>
+    @if (Product) {
+        <form  style="background-color: #b57945;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        transition: all .2s ease-in-out; font-size:15pt;font-weight: 600; border-radius: 15px;" class="form p-4">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Title</label>
+                    <input #title formControlName="title" value={{Product.title}} type="text" class="form-control w-100" placeholder="Title">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Description</label>
+                    <input #description formControlName="description" value={{Product.description}} type="text" class="form-control w-100 " placeholder="Description">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Ingredients</label>
+                    <input #ingredients formControlName="ingredients" value={{Product.ingredients}} type="text" class="form-control w-100" placeholder="Ingredients">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Image URL</label>
+                    <input #image formControlName="image" type="text" value={{Product.image}} class="form-control w-100" placeholder="Image URL">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Category</label>
+                    <input #category formControlName="category" value={{Product.category}} type="text" class="form-control w-100" placeholder="Category">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label" style="color: #58300d;">Price</label>
+                    <input #price formControlName="price" value={{Product.price}} type="text" class="form-control w-100" placeholder="Price">
+                </div>
+            </div>
+
+
+
+
+            <div style="margin-top: 20px; display: flex; justify-content: center;">
+
+                <button (click)="Updateprd(title.value,description.value,ingredients.value,image.value,category.value,price.value)"
+                    class="btn" style="background-color: #58300d; color: white;width: 40%; ">Update</button>
+
+                <button (click)="Deleteprd()"
+                class="btn" style=" background-color: #58300d; color: white;width: 40%;margin-left: 10px;">Delete</button>
+                
+            </div> 
+        </form>
+}
+</div>
